@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿#define _USE_MATH_DEFINES
+#include <iostream>
 #include <cmath>
 #include <locale>
 using namespace std;
@@ -18,7 +19,7 @@ public:
     }
 
     double area() const {
-        const double PI = 3.14;
+        const double PI = M_PI;
         return PI * radius * radius;
     }
 
@@ -49,6 +50,12 @@ public:
     double getHeight() const {
         return height;
     }
+
+    double lateralArea() const {
+// Аргументы гарантированно положительны благодаря конструктору
+        double l = sqrt(radius * radius + height * height);
+        return M_PI * radius * l;
+}
 };
 
 double inputPositive(const string& message) {
