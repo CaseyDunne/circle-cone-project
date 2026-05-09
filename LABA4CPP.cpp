@@ -43,7 +43,7 @@ public:
     }
 
     double volume() const {
-        return (1.0 / 3.0) * area() * height;
+	return (M_PI * radius * radius * height) / 3.0;  // перегруппировка
     }
 
     double getHeight() const {
