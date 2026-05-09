@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿#define _USE_MATH_DEFINES
+#include <iostream>
 #include <cmath>
 #include <locale>
 using namespace std;
@@ -18,7 +19,7 @@ public:
     }
 
     double area() const {
-        const double PI = 3.14;
+        const double PI = M_PI;
         return PI * radius * radius;
     }
 
