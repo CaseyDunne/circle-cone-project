@@ -52,6 +52,7 @@ public:
     }
 
     double lateralArea() const {
+// Аргументы гарантированно положительны благодаря конструктору
         double l = sqrt(radius * radius + height * height);
         return M_PI * radius * l;
 }
