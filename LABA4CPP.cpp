@@ -50,6 +50,11 @@ public:
     double getHeight() const {
         return height;
     }
+
+    double lateralArea() const {
+        double l = sqrt(radius * radius + height * height);
+        return M_PI * radius * l;
+}
 };
 
 double inputPositive(const string& message) {
